@@ -4,16 +4,19 @@
 Welcome to the **Habit Tracker & Journal**! This simple yet powerful web application is designed to help users track their daily habits and maintain a journal of their thoughts and feelings. By integrating features like gamification and mood tracking, it encourages self-improvement and reflection, making your personal growth journey enjoyable and rewarding.
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Habit Tracker \& Journal](#habit-tracker--journal)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+    - [Key Features](#key-features)
+  - [Technologies Used](#technologies-used)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
 ## Features
 
