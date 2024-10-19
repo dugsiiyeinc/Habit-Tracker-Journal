@@ -6,6 +6,7 @@ Welcome to the **Personalized Habit Tracker & Journal**! This web application is
 
 ## Table of Contents
 
+
 - [Personalized Habit Tracker \& Journal](#personalized-habit-tracker--journal)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
@@ -17,6 +18,7 @@ Welcome to the **Personalized Habit Tracker & Journal**! This web application is
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
+
 
 ## Features
 
@@ -109,3 +111,5 @@ For inquiries or feedback, please reach out to:
 ---
 
 Thank you for exploring the **Personalized Habit Tracker & Journal**! We hope this application helps you on your journey of self-improvement and reflection.
+
+
