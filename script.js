@@ -5,7 +5,14 @@ const signupForm = document.getElementById('signUpForm')
 const loginForm = document.getElementById('signInForm')
 
 
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
+});
 
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
 
 signupForm.addEventListener('submit', function(event) {
     event.preventDefault();
