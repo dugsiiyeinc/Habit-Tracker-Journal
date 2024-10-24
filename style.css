@@ -193,3 +193,22 @@ p {
     height: 40px;
     width: 40px;
 }
+
+/* darkmodetoggle */
+
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dark-mode{
+    background-color: black;
+    /* color: red; */
+}
