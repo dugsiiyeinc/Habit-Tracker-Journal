@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background:  #2c2726;
+    color: #333;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-button em{
+    color: #d0ae26;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+   
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    color: #fff;
+    position: relative;
+    right: -44rem;
+    flex-direction: row-reverse;
+}
+
+.logo:hover{
+    background: rgba(255, 255, 255, 0.311);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.circle {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#fff 0deg 180deg, #6a0dad 180deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    color: #d0ae26;
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+
+
+/* Main Content */
+main {
+    background-image: url("https://media.istockphoto.com/id/1058467476/photo/monochrome-beautiful-dahlia-closed-up-modern-art-poster-for-interior-design.webp?a=1&b=1&s=612x612&w=0&k=20&c=aumLv2fSxquKXnWc_6gDVUBXqMmBmwgiDPI2W4KfYa0=");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.content {
+    background-image: url("https://media.istockphoto.com/id/945451566/photo/black-blank-stationery-set-with-phone-earphone-coffee-on-dark-wood-background-inclined.webp?a=1&b=1&s=612x612&w=0&k=20&c=zl6uLnZgOlSPuNHmVfRDS-iX7ohi6TkIMx3zpq2L0_4=");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+/* Canvas */
+canvas {
+    max-width: 100%;
+    margin: 2rem auto;
+    background: #423a3a;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 23px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    background-color: #0e0e0e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: auto;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+footer em {
+    color: #d0ae26;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.2rem;   
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        left: 0;
+    }
+
+    .content {
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+
+    canvas {
+        padding: 0.5rem;
+    }
+
+    footer em {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    footer em {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+    }
+}
