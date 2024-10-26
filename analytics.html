@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Analytics</title>
+    <link rel="stylesheet" href="analytics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button class="back-button" onclick="goBack()"><em>⬅ Back</em></button>
+            <h1 class="page-title">Metrics Overview</h1>
+            <div class="logo-container">
+                <h2 class="logo">
+                    HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
+                </h2>
+            </div>
+        </header>
+    
+        <main>
+            <section class="content">
+                <h2>Weekly Activity Progress</h2>
+                <canvas id="activityChart" width="400" height="200"></canvas>
+            </section>
+        </main>
+        <footer>
+            <p><em>&copy;</em>2024 Habit Tracker. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize local storage with sample data if it's empty
+        if (!localStorage.getItem('habits')) {
+            localStorage.setItem('habits', JSON.stringify([
+                { name: 'Exercise', goal: 30 },
+                { name: 'Reading', goal: 10 },
+                { name: 'Meditation', goal: 5 },
+                { name: 'Water Intake', goal: 15 },
+                { name: 'Sleep', goal: 8 }
+            ]));
+        }
+    </script>
+    <script src="analytics.js"></script>
+</body>
+</html>
