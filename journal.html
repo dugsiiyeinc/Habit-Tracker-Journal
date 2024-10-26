@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="daily-journal.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <button class="back-button" onclick="goBack()"><em>⬅ Back</em></button>
+        <h1 class="page-title">Daily Journal</h1>
+        <div class="logo-container">
+            <h2 class="logo">
+                HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
+            </h2>
+        </div>
+    </header>
+
+    <div class="journal-container">
+        <h1>Daily Journal</h1>
+        <form id="journal-form">
+            <input type="text" id="entry-title" placeholder="Title" required>
+            <div id="editor" style="height: 200px;"></div>
+            <select id="mood-select">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="neutral">Neutral</option>
+                <option value="excited">Excited</option>
+                <option value="anxious">Anxious</option>
+                <option value="angry">Angry</option>
+                <option value="grateful">Grateful</option>
+                <option value="tired">Tired</option>
+                <option value="relaxed">Relaxed</option>
+                <option value="hopeful">Hopeful</option>
+                <option value="frustrated">Frustrated</option>
+                <option value="confident">Confident</option>
+                <option value="lonely">Lonely</option>
+                <option value="overwhelmed">Overwhelmed</option>
+                <option value="bored">Bored</option>
+                <option value="curious">Curious</option>
+                <option value="inspired">Inspired</option>
+                <option value="motivated">Motivated</option>
+                <option value="calm">Calm</option>
+                <option value="stressed">Stressed</option>
+                <option value="content">Content</option>
+                <option value="surprised">Surprised</option>
+                <option value="nervous">Nervous</option>
+                <option value="pensive">Pensive</option>
+            </select>
+            
+            <input type="file" id="entry-image" accept="image/*">
+            <button onclick="exportEntries()">Export Entries</button>
+            <input type="file" id="import-file" accept=".json" onchange="importEntries(event)">
+            <button type="submit">Save</button>
+        </form>
+        
+        <input type="text" id="search-bar" placeholder="Search entries..." oninput="filterEntries()">
+        <canvas id="moodChart" width="400" height="200"></canvas>
+        <div id="entry-list"></div>
+    </div>
+
+    <footer class="footer">
+        <p><em>&copy;</em> 2024 Habit Tracker. All Rights Reserved.</p>
+    </footer>
+
+    <script src="journal.js"></script>
+</body>
+</html>
