@@ -3,6 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 const signupForm = document.getElementById('signUpForm')
 const loginForm = document.getElementById('signInForm')
+const togledark = document.getElementById('darkModeToggle') 
 
 
 signUpButton.addEventListener('click', () => {
@@ -34,5 +35,28 @@ loginForm.addEventListener('submit', function(event) {
         alert('User registered successfully!');
     } else {
         alert('Invalid email or password. Please try again.');
+    }
+});
+
+
+const toggleButton = document.getElementById('darkModeToggle');
+const body = document.body;
+
+toggleButton.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    
+    // Save the user's preference in localStorage
+    if(body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Check user's saved theme preference on page load
+window.addEventListener('load', function() {
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme === 'dark') {
+        body.classList.add('dark-mode');
     }
 });
