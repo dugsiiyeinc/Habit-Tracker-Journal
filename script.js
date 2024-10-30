@@ -32,7 +32,7 @@ loginForm.addEventListener('submit', function(event) {
     const password = document.getElementById('loginPassword').value;
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-        alert('User registered successfully!');
+       alert('User registered successfully!');
     } else {
         alert('Invalid email or password. Please try again.');
     }
@@ -45,15 +45,14 @@ const body = document.body;
 toggleButton.addEventListener('click', function() {
     body.classList.toggle('dark-mode');
     
-    // Save the user's preference in localStorage
+   
     if(body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
         localStorage.setItem('theme', 'light');
+    } else {
+        localStorage.setItem('theme', 'dark');
     }
 });
 
-// Check user's saved theme preference on page load
 window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme === 'dark') {
