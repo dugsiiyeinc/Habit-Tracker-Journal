@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
     <link rel="stylesheet" href="daily-journal.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <header class="header">
-        <button class="back-button" onclick="goBack()"><em>⬅ Back</em></button>
-        <h1 class="page-title">Daily Journal</h1>
+    <header>
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
         <div class="logo-container">
-            <h2 class="logo">
+            <h1 class="logo">
                 HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
-            </h2>
+            </h1>
         </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="new-habits.html">New Habits</a></li>
+                <li><a href="journal.html">Daily Journal</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Manage</button>
+                    <div class="dropdown-content">
+                        <a href="manage.html">Settings</a>
+                        <a href="notifications.html">Notifications</a>
+                        <a href="profile.html">Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <div class="journal-container">
