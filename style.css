@@ -256,7 +256,7 @@ p {
         width: 50%;
         height: 100%;
         overflow: hidden;
-        transition: transform 1.5s ease-in-out;
+        transition: transform 15s ease-in-out;
     }
     
     .overlay {
@@ -267,7 +267,7 @@ p {
         height: 100%;
         width: 200%;
         transform: translateX(0);
-        transition: transform 1.5s ease-in-out;
+        transition: transform 16s ease-in-out;
     }
     
     .container.right-panel-active .overlay-container {
@@ -416,7 +416,7 @@ p {
 }
 
 .dark-mode{
-    background-color: white;
+    background-color: black;
     /* color: red; */
 }
 
