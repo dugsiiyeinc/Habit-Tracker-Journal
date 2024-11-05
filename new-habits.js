@@ -54,9 +54,9 @@ function formatTime(time, ampm) {
     let formattedHours = parseInt(hours, 10);
 
     if (ampm === "PM" && formattedHours < 12) {
-        formattedHours += 12; // Convert to 24-hour format
+        formattedHours += 12; 
     } else if (ampm === "AM" && formattedHours === 12) {
-        formattedHours = 0; // Midnight case
+        formattedHours = 0; 
     }
 
     return `${String(formattedHours).padStart(2, '0')}:${minutes}`;
@@ -79,9 +79,6 @@ async function saveHabit(habit) {
     });
 }
 
-
-// Function to fetch and display habit data
-// Function to fetch and display habit data
 // Function to fetch habit data from localStorage
 async function fetchHabitData() {
     return new Promise((resolve) => {
@@ -93,8 +90,8 @@ async function fetchHabitData() {
 // Function to fetch and display habit data
 async function fetchHabits() {
     try {
-        const habits = await fetchHabitData(); // Fetch data from localStorage
-        displayHabitStatus(habits); // Call a function to display the habit status
+        const habits = await fetchHabitData(); 
+        displayHabitStatus(habits); 
     } catch (error) {
         console.error('Error fetching habits:', error);
         alert('There was an error fetching the habits. Please try again.');
@@ -103,18 +100,18 @@ async function fetchHabits() {
 
 // Function to display habits on the page
 function displayHabitStatus(habits) {
-    const habitStatusContainer = document.querySelector('#habit-status'); // A container to display habits
-    habitStatusContainer.innerHTML = ''; // Clear existing content
+    const habitStatusContainer = document.querySelector('#habit-status'); 
+    habitStatusContainer.innerHTML = ''; 
 
     if (habits.length === 0) {
-        habitStatusContainer.innerHTML = '<p>No habits found.</p>'; // Show message if no habits exist
+        habitStatusContainer.innerHTML = '<p>No habits found.</p>'; 
         return;
     }
 
     // Iterate through habits and create a display for each
     habits.forEach(habit => {
         const habitElement = document.createElement('div');
-        habitElement.classList.add('habit-status-item'); // Add a class for styling
+        habitElement.classList.add('habit-status-item'); 
         
         // Create a status message for each habit
         habitElement.innerHTML = `
@@ -122,6 +119,61 @@ function displayHabitStatus(habits) {
             Reminder: ${habit.reminder}
         `;
 
-        habitStatusContainer.appendChild(habitElement); // Append to the container
+        habitStatusContainer.appendChild(habitElement); 
     });
+}
+// Function to display habits on the page
+function displayHabitStatus(habits) {
+    const habitStatusContainer = document.querySelector('#habit-status');
+    habitStatusContainer.innerHTML = '';
+
+    if (habits.length === 0) {
+        habitStatusContainer.innerHTML = '<p>No habits found.</p>';
+        return;
+    }
+
+    // Iterate through habits and create a display for each with Edit and Delete buttons
+    habits.forEach((habit, index) => {
+        const habitElement = document.createElement('div');
+        habitElement.classList.add('habit-status-item');
+        
+        // Add habit details along with Edit and Delete buttons
+        habitElement.innerHTML = `
+            <strong>${habit.name}</strong>: ${habit.goal} <br>
+            Reminder: ${habit.reminder}
+            <br>
+            <button onclick="editHabit(${index})">Edit</button>
+            <button onclick="deleteHabit(${index})">Delete</button>
+        `;
+
+        habitStatusContainer.appendChild(habitElement);
+    });
+}
+
+// Function to edit a habit
+function editHabit(index) {
+    const habits = JSON.parse(localStorage.getItem('habits')) || [];
+    const habit = habits[index];
+
+    // Populate form fields with the habit details for editing
+    document.getElementById('habit-name').value = habit.name;
+    document.getElementById('habit-goal').value = habit.goal;
+    const [hours, minutes] = habit.reminder.split(':');
+    document.getElementById('reminder-time').value = `${hours}:${minutes}`;
+    document.getElementById('reminder-ampm').value = hours >= 12 ? 'PM' : 'AM';
+
+    // Remove the habit from the list, so it can be saved as a new one
+    habits.splice(index, 1);
+    localStorage.setItem('habits', JSON.stringify(habits));
+
+    fetchHabits(); 
+}
+
+// Function to delete a habit
+function deleteHabit(index) {
+    const habits = JSON.parse(localStorage.getItem('habits')) || [];
+    habits.splice(index, 1); // Remove the habit by index
+    localStorage.setItem('habits', JSON.stringify(habits));
+    
+    fetchHabits(); 
 }
