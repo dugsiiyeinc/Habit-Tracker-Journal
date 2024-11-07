@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Habits - Habit Tracker</title>
     <link rel="stylesheet" href="new-habits.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <header class="header">
-        <button class="back-button" onclick="goBack()"><em>⬅ Back</em></button>
-        <h1 class="page-title">New Habits</h1>
+    <header>
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
         <div class="logo-container">
-            <h2 class="logo">
+            <h1 class="logo">
                 HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
-            </h2>
+            </h1>
         </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="new-habits.html">New Habits</a></li>
+                <li><a href="journal.html">Daily Journal</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Manage</button>
+                    <div class="dropdown-content">
+                        <a href="manage.html">Settings</a>
+                        <a href="notifications.html">Notifications</a>
+                        <a href="profile.html">Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main class="main-content">
