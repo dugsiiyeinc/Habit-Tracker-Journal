@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Habits - Habit Tracker</title>
+    <link rel="stylesheet" href="new-habits.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <header>
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+        <div class="logo-container">
+            <h1 class="logo">
+                HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
+            </h1>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="new-habits.html">New Habits</a></li>
+                <li><a href="journal.html">Daily Journal</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Manage</button>
+                    <div class="dropdown-content">
+                        <a href="manage.html">Settings</a>
+                        <a href="notifications.html">Notifications</a>
+                        <a href="profile.html">Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Add a New Habit</h2>
+            <form id="habit-form" class="habit-form">
+                <div class="form-group">
+                    <label for="habit-name">Habit Name</label>
+                    <input type="text" id="habit-name" placeholder="e.g., Exercise" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="habit-goal">Goal</label>
+                    <input type="text" id="habit-goal" placeholder="e.g., Run 5 km" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reminder-time">Reminder Time</label>
+                    <div class="time-container">
+                        <input type="time" id="reminder-time" required>
+                        <select id="reminder-ampm" required>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                <button type="submit" class="btn-primary">Add Habit</button>
+                <button type="button" onclick="fetchHabits()" class="fetchHabits-btn">Check Habit Status</button>
+            </form>
+        </section>
+    
+        <section>
+            <div id="habit-status"></div> 
+            <canvas id="habitChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+    
+
+    <footer class="footer">
+        <p><em>&copy;</em>2024 Habit Tracker. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="new-habits.js"></script>
+</body>
+</html>

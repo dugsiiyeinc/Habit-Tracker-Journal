@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Habit Tracker</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+            <div class="logo-container">
+                <h1 class="logo">
+                    HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
+                </h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="new-habits.html">New Habits</a></li>
+                    <li><a href="journal.html">Daily Journal</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Manage</button>
+                        <div class="dropdown-content">
+                            <a href="manage.html">Settings</a>
+                            <a href="notifications.html">Notifications</a>
+                            <a href="profile.html">Profile</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Track Your Habits</h2>
+                <p>Manage and track your daily habits, see progress in analytics, and keep a daily journal.</p>
+                <button class="btn-primary" onclick="location.href='new-habits.html'">Add New Habits</button>
+            </section>
+        </main>
+        <footer>
+            <p><em>&copy;</em>2024 Habit Tracker. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="main.js"></script> 
+</body>
+</html> 

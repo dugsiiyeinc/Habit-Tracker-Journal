@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1484807352052-23338990c6c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQyfHx8ZW58MHx8fHx8");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header styles */
+.header {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-button em {
+    color: #d0ae26;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    color: #fff;
+    position: relative;
+    right: -44rem;
+    flex-direction: row-reverse;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.311);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+
+.circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#fff 0deg 180deg, #6a0dad 180deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    color: #d0ae26;
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+/* Journal container */
+.journal-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 5vh auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+h1:hover{
+    background: rgba(255, 255, 255, 0.311);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.entry-list {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea, select, button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color:  #8a720f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cfb23e;
+}
+
+#entry-list {
+    margin-top: 2rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.entry {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.entry h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.entry p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.entry small {
+    color: #666;
+}
+
+.entry-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0e0e0e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+footer em {
+    color: #d0ae26;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .journal-container {
+        padding: 1rem;
+        margin: 2vh auto;
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        display: none !important;
+        right: 0;
+        font-size: 0.9rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, textarea, select, button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .entry {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border-radius: 0;
+    }
+    
+    .back-button {
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgb(93, 77, 77);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+   
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    color: #fff;
+    position: relative;
+    left: 3rem;
+}
+
+.logo:hover{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.circle {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#fff 0deg 180deg, #6a0dad 180deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    color: #d0ae26;
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+
+
+.nav-list {
+    border-radius: 0.3rem;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex: 1;
+    margin-right: 3rem;
+    transition: max-height 0.3s ease; 
+    overflow: hidden; 
+}
+
+.nav-list li {
+    margin: 0.5rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+/* Dropdown Styles */
+.dropbtn {
+    background-color: tan;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9a1109;
+    width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: rgb(26, 24, 24);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.5s ease;
+}
+
+.dropdown-content .dropdown:hover a:hover {
+    background-color: #e9583b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+    
+}
+
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
