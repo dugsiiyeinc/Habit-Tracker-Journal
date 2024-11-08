@@ -358,6 +358,33 @@ main {
     opacity: 0.9;
 }
 
+
+.feature-info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+}
+
+.feature-box .info-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feature-box .info-btn:hover {
+    background-color: #0056b3;
+}
+
+
 /* Testimonial Section */
 .testimonial {
     

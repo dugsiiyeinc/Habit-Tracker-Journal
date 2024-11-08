@@ -44,22 +44,41 @@
 
             <section class="features">
                 <h2>Why Use Habit Tracker?</h2>
+                
                 <div class="feature-box">
                     <img src="images/Visualize1.avif" alt="VisualizeImage">
                     <h3>Visualize Your Progress</h3>
                     <p>Use our intuitive charts and graphs to see how you’re improving day by day.</p>
+                    <button class="info-btn" onclick="toggleFeatureInfo('visualize')">More Info</button>
+                    <div class="feature-info" id="visualize-info">
+                        <p>Track your daily improvements with detailed analytics and graphs that update automatically.</p>
+                        <img src="images/VisualizeDetail.avif" alt="Detailed Visual Progress Image">
+                    </div>
                 </div>
+                
                 <div class="feature-box">
                     <img src="images/Motivational.avif" alt="Motivational Image">
                     <h3>Daily Motivational Quotes</h3>
                     <p>Receive daily quotes to keep you motivated and focused on your goals.</p>
+                    <button class="info-btn" onclick="toggleFeatureInfo('motivational')">More Info</button>
+                    <div class="feature-info" id="motivational-info">
+                        <p>Get fresh, inspiring quotes every day to boost your motivation and keep you focused.</p>
+                        <img src="images/MotivationalDetail.avif" alt="Motivational Details Image">
+                    </div>
                 </div>
+                
                 <div class="feature-box">
-                    <img src="images/CommunityS3.webp" alt="CommunityS Image">
+                    <img src="images/CommunityS3.webp" alt="Community Image">
                     <h3>Community Support</h3>
                     <p>Join our community to share your journey and get support from others.</p>
+                    <button class="info-btn" onclick="toggleFeatureInfo('community')">More Info</button>
+                    <div class="feature-info" id="community-info">
+                        <p>Connect with a community that shares similar goals, offering both support and accountability.</p>
+                        <img src="images/CommunityDetail.webp" alt="Community Details Image">
+                    </div>
                 </div>
             </section>
+            
 
             <section class="testimonial">
                 <h2>What Our Users Say</h2>
