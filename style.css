@@ -6,30 +6,42 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Darker Background Animation */
 body {
-    background: #f6f5f7;
+    background: linear-gradient(-45deg, #292641, #0c0c1c, #122334, #1a2d40);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: -20px 0 50px;
-
-    background-color: black;
-    color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Gradient Animation Keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Darker Container Style with Glassmorphism */
 .container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    transition: all 0.3s ease;
 }
 
+/* Form Containers */
 .sign-in-container, .sign-up-container {
     width: 50%;
     position: absolute;
@@ -61,6 +73,7 @@ body {
     z-index: 5;
 }
 
+/* Overlay for Form Switching */
 .overlay-container {
     position: absolute;
     top: 0;
@@ -72,14 +85,14 @@ body {
 }
 
 .overlay {
-    background: linear-gradient(to right, #5D5554, #5D5554);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(35, 86, 105, 0.7));
     color: #fff;
     position: absolute;
     left: -100%;
     height: 100%;
     width: 200%;
     transform: translateX(0);
-    transition: transform 1.5s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .container.right-panel-active .overlay-container {
@@ -119,11 +132,40 @@ body {
     transform: translateX(20%);
 }
 
-/* Button styles */
+/* Form Styling */
+form {
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    color: #ddd;
+}
+
+/* Input Styling */
+input {
+    background-color: #333;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: #ddd;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #23a6d5;
+    box-shadow: 0 0 10px rgba(35, 166, 213, 0.5);
+}
+
+/* Buttons */
 button {
     border-radius: 20px;
-    border: 1px solid #5D5554;
-    background-color: #5D5554;
+    border: 1px solid #444;
+    background-color: #444;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -134,51 +176,31 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #222;
+    color: #fff;
+    transform: scale(1.05);
+}
+
 button.ghost {
     background-color: transparent;
     border-color: #fff;
 }
 
-form {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1A1A1A;
+    color: #e0e0e0;
 }
 
-input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+.container.dark-mode {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-a {
-    color: #333;
-    font-size: 14px;
-    margin: 15px 0;
-    text-decoration: none;
-}
-
-h1 {
-    font-weight: bold;
-    margin: 0;
-}
-
-p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
+/* Social Icons */
 .social-container a {
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid #dddddd;
     border-radius: 50%;
     display: inline-flex;
@@ -187,8 +209,14 @@ p {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+    transition: all 0.3s ease;
 }
 
+.social-container a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Mode Toggle Button */
 #darkModeToggle {
     position: absolute;
     top: 20px;
@@ -201,12 +229,35 @@ p {
     cursor: pointer;
 }
 
-body.dark-mode {
-    background-color: white;
-    color: black;
-  }
+/* Text Styling */
+h1 {
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
-/* Responsive styles */
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color: #bbb;
+    max-width: 300px;
+}
+
+/* Links */
+a {
+    color: #888;
+    font-size: 14px;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .container {
         width: 100%;

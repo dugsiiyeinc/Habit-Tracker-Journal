@@ -3,7 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 const signUpForm = document.getElementById('signUpForm');
 const signInForm = document.getElementById('signInForm');
-const toggleDarkModeButton = document.getElementById('darkModeToggle');
+
 
 // Toggle form panel
 signUpButton.addEventListener('click', () => {
@@ -37,13 +37,7 @@ signInForm.addEventListener('submit', (event) => {
     }
 });
 
-// Dark mode toggle
-const toggleButton = document.getElementById('darkModeToggle');
 
-// Add event listener to toggle dark mode
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
 
 
 // Load saved theme
