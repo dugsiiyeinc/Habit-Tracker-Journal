@@ -14,7 +14,7 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 
-    background-color: white;
+    background-color: #A79E99;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
