@@ -8,7 +8,7 @@
 
 /* Darker Background Animation */
 body {
-    background: linear-gradient(-45deg, #292641, #0c0c1c, #122334, #1a2d40);
+    background: linear-gradient(-45deg, #2e2a4f, #3a3a62, #2b4865, #1a2d40);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: #ddd;
