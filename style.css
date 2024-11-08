@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +13,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: -20px 0 50px;
+
+    background-color: #A79E99;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 .container {
     background-color: #fff;
     border-radius: 10px;
@@ -23,9 +29,17 @@ body {
     max-width: 100%;
     min-height: 480px;
 }
+
+.sign-in-container, .sign-up-container {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
 .sign-in-container {
     left: 0;
-    width: 50%;
     z-index: 2;
 }
 
@@ -35,19 +49,10 @@ body {
     z-index: 1;
 }
 
-/* Form Containers */
-.form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-}
-
 .sign-up-container {
     left: 0;
-    width: 50%;
-    opacity: 0;
     z-index: 1;
+    opacity: 0;
 }
 
 .container.right-panel-active .sign-up-container {
@@ -56,7 +61,6 @@ body {
     z-index: 5;
 }
 
-/* Overlay switches Styles */
 .overlay-container {
     position: absolute;
     top: 0;
@@ -68,7 +72,7 @@ body {
 }
 
 .overlay {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #5D5554, #5D5554);
     color: #fff;
     position: absolute;
     left: -100%;
@@ -115,12 +119,11 @@ body {
     transform: translateX(20%);
 }
 
-/* buttons style */
-
+/* Button styles */
 button {
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background-color: #ff4b2b;
+    border: 1px solid #5D5554;
+    background-color: #5D5554;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -134,9 +137,6 @@ button {
 button.ghost {
     background-color: transparent;
     border-color: #fff;
-}
-button {
-    margin-top: 10px;
 }
 
 form {
@@ -178,11 +178,6 @@ p {
     margin: 20px 0 30px;
 }
 
-/* social icon */
-.social-container {
-    margin: 20px 0;
-}
-
 .social-container a {
     border: 1px solid #dddddd;
     border-radius: 50%;
@@ -194,21 +189,41 @@ p {
     width: 40px;
 }
 
-/* darkmodetoggle */
-
 #darkModeToggle {
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #ff4b2b;
+    background-color: #5D5554;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.dark-mode{
-    background-color: black;
-    /* color: red; */
+body.dark-mode {
+    background-color: #121212;
+    color: black;
+  }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .sign-in-container, .sign-up-container {
+        width: 100%;
+        left: 0;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    button {
+        width: 100%;
+    }
 }
