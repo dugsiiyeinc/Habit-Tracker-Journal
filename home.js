@@ -5,10 +5,10 @@ function toggleFeatureInfo(featureId) {
     // Toggle display
     if (featureInfo.style.display === "block") {
         featureInfo.style.display = "none";
-        localStorage.setItem(`${featureId}-viewed`, "false"); // Update storage
+        localStorage.setItem(`${featureId}-viewed`, "false"); 
     } else {
         featureInfo.style.display = "block";
-        localStorage.setItem(`${featureId}-viewed`, "true"); // Update storage
+        localStorage.setItem(`${featureId}-viewed`, "true"); 
     }
 }
 

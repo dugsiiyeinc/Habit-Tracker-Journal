@@ -64,7 +64,7 @@ async function editEntry(index) {
     // Check if the entry exists
     if (index < 0 || index >= entries.length) {
         alert("Error: Entry does not exist. Please select a valid entry to edit.");
-        return; // Exit if the index is invalid
+        return; 
     }
 
     const entry = entries[index];
@@ -83,7 +83,7 @@ async function deleteEntry(index) {
     // Check if the entry exists
     if (index < 0 || index >= entries.length) {
         alert("Error: Entry does not exist. Please select a valid entry to delete.");
-        return; // Exit if the index is invalid
+        return; 
     }
 
     // Remove the entry and update localStorage
