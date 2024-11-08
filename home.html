@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Habit Tracker</title>
     <link rel="stylesheet" href="home.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <header>
-            <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-            <div class="logo-container">
-                <h1 class="logo">
-                    HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE
-                </h1>
-            </div>
+    <div class="container"> <header> <button class="hamburger-menu" onclick="toggleMenu()">☰</button> <div class="logo-container"> <h1 class="logo"> HABIT <span class="circle"><span class="checkmark">✔</span></span> ONE </h1> </div>
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
@@ -33,17 +28,78 @@
                 </ul>
             </nav>
         </header>
+        
         <main>
-            <section class="content">
+            <section class="hero">
                 <h2>Track Your Habits</h2>
-                <p>Manage and track your daily habits, see progress in analytics, and keep a daily journal.</p>
+                <p>
+                    Manage and track your daily habits with ease. Our intuitive interface lets you log your habits, analyze your progress, and stay on top of your goals every day.<br><br>
+                    Whether you're building a new routine or tracking long-term habits, Habit Tracker helps you visualize improvements, stay motivated, and stay accountable. Stay connected with your goals through insightful analytics and see how small changes can lead to big results.<br><br>
+                    With our easy-to-use system, you can create personalized reminders, set achievable milestones, and get inspired with daily motivational quotes. Make every day count and build the life you've always wanted. <br><br>
+                    Track your progress, improve consistently, and join a community of people committed to success. Make your journey to better habits more enjoyable and rewarding with Habit Tracker.
+                </p>
+                
                 <button class="btn-primary" onclick="location.href='new-habits.html'">Add New Habits</button>
             </section>
+
+            <section class="features">
+                <h2>Why Use Habit Tracker?</h2>
+                <div class="feature-box">
+                    <img src="images/Visualize1.avif" alt="VisualizeImage">
+                    <h3>Visualize Your Progress</h3>
+                    <p>Use our intuitive charts and graphs to see how you’re improving day by day.</p>
+                </div>
+                <div class="feature-box">
+                    <img src="images/Motivational.avif" alt="Motivational Image">
+                    <h3>Daily Motivational Quotes</h3>
+                    <p>Receive daily quotes to keep you motivated and focused on your goals.</p>
+                </div>
+                <div class="feature-box">
+                    <img src="images/CommunityS3.webp" alt="CommunityS Image">
+                    <h3>Community Support</h3>
+                    <p>Join our community to share your journey and get support from others.</p>
+                </div>
+            </section>
+
+            <section class="testimonial">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-box">
+                    <p>“This app has changed my life! I’m more productive than ever.”</p>
+                    <h4>- Alex P.</h4>
+                </div>
+                <div class="testimonial-box">
+                    <p>“I love the daily quotes! They really help me stay on track.”</p>
+                    <h4>- Jessica K.</h4>
+                </div>
+            </section>
         </main>
-        <footer>
-            <p><em>&copy;</em>2024 Habit Tracker. All Rights Reserved.</p>
-        </footer>
     </div>
-    <script src="main.js"></script> 
+
+    <footer>
+        <p><em>&copy;</em> 2024 Habit Tracker. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com" class="social-icon">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+            </a>
+            <a href="https://twitter.com" class="social-icon">
+                <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+            </a>
+            <a href="https://instagram.com" class="social-icon">
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+        </div>
+        <div class="newsletter">
+            <form>
+                <input type="email" placeholder="Subscribe to our newsletter" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    
+    <script src="home.js"></script>
 </body>
-</html> 
+</html>
