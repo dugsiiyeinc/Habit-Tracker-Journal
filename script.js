@@ -31,19 +31,17 @@ signInForm.addEventListener('submit', (event) => {
     const password = document.getElementById('loginPassword').value;
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-        alert('Sign in successful!');
+        window.location.href = 'home.html';
     } else {
         alert('Invalid email or password. Please try again.');
     }
 });
 
 // Dark mode toggle
-// Get the button element
 const toggleButton = document.getElementById('darkModeToggle');
 
 // Add event listener to toggle dark mode
 toggleButton.addEventListener('click', () => {
-  // Toggle the 'dark-mode' class on the body
   document.body.classList.toggle('dark-mode');
 });
 
