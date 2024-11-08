@@ -150,24 +150,25 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem 0;
+    padding: 2rem 1rem; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    min-height: calc(100vh - 80px); 
+    box-sizing: border-box;
 }
 
 .content {
     background-image: url("https://media.istockphoto.com/id/945451566/photo/black-blank-stationery-set-with-phone-earphone-coffee-on-dark-wood-background-inclined.webp?a=1&b=1&s=612x612&w=0&k=20&c=zl6uLnZgOlSPuNHmVfRDS-iX7ohi6TkIMx3zpq2L0_4=");
-    background-size: cover;
+    background-size: contain; /* Adjust background size to fit */
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-height: 90%;
+    max-width: 100%; /* Ensures it doesn’t overflow */
+    height: auto;
     overflow-y: auto;
 }
 
@@ -181,25 +182,24 @@ canvas {
     box-shadow: 0 23px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 footer {
     background-color: #0e0e0e;
     color: white;
     text-align: center;
     padding: 0.5rem;
-    margin-top: auto;
-    overflow: hidden;
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
     background: rgba(0, 0, 0, 0.9);
 }
-
-
 
 footer em {
     color: #d0ae26;
     margin-left: 0.5rem;
     font-size: 1.5rem;
-    padding: 0.2rem;   
+    padding: 0.2rem;
 }
+
 
 
 /* Responsive Styles */
@@ -228,18 +228,19 @@ footer em {
     }
 }
 
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+        margin: 0 1rem;
+        max-width: 90%; 
+    }
+}
+
 @media (max-width: 480px) {
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    footer em {
-        font-size: 1rem;
-    }
-
     .content {
         padding: 0.5rem;
         margin: 0 0.5rem;
+        max-width: 100%; 
     }
 }
 
