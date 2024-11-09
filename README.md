@@ -1,6 +1,6 @@
 Habit One - Habit Tracker and Journal
 
-Habit One is a collaborative project by Naima and caaqil, developed as a web-based tool to help users establish and maintain healthy habits through structured habit tracking, journaling, and personalized analytics.
+Habit One is a collaborative project by Engr Naima and Engr Abdulkadir caaqilka, developed as a web-based tool to help users establish and maintain healthy habits through structured habit tracking, journaling, and personalized analytics.
 
 Project History
 
